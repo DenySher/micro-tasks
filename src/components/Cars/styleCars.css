@@ -1,0 +1,20 @@
+table {
+    width: 300px;
+    text-align: center;
+    border: 3px solid grey;
+}
+
+thead {
+    background-color: black;
+    color: gold;
+}
+
+tr:hover {
+    background-color: black;
+    color: aliceblue;
+}
+
+td {
+    width: 30%;
+    border: 1px solid grey;
+}

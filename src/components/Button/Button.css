@@ -1,0 +1,22 @@
+
+.Butons {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    text-align: center;
+    
+}
+
+button {
+    width: 100px;
+    padding: 5px;
+    background-color: black;
+    color: aliceblue;
+    border: 1px solid grey;
+    border-radius: 7px;
+}
+
+button:hover {
+    background-color: aliceblue;
+    color:black;
+}

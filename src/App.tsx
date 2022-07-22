@@ -1,27 +1,23 @@
 import './App.css';
-import Header from './components/Header';
-import Body from './components/Body';
-import Footer from './components/Footer';
-import Cars from './components/Cars';
+import ShowButton from './components/Button/ShowButton';
+import ShowtCars from './components/Cars/ShowCars'
 
 function App() {
 
-    const topCars = [
-        { manufacturer: 'BMW', model: 'm5cs' },
-        { manufacturer: 'Mercedes', model: 'e63s' },
-        { manufacturer: 'Audi', model: 'rs6' }
-    ]
-
-
     return (
-        <>
-            <Header title={'NEW header'}/>
-            <Body title={'NEW body'}/>
-            <Footer title={'NEW footer'}/>
-            
-            <Cars topCars={topCars} />
-
-        </>
+        <div>
+            <h2>Monday first week:</h2>
+            <div className='containerTasks'>
+                <div className='item'>
+                    <h4>metod Map (Car list)</h4>
+                    <ShowtCars />
+                </div>
+                <div className='item'>
+                    <h4>Button (Universal components)</h4>
+                    <ShowButton />
+                </div>
+            </div>
+        </div>
     );
 }
 
