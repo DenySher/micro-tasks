@@ -3,7 +3,7 @@ type ButtonType = {
     name: string
     callBack: () => void
 }
-const button = (props: ButtonType) => {
+const Button = (props: ButtonType) => {
 
     const onClickHandler = () => {
         props.callBack()
@@ -16,4 +16,4 @@ const button = (props: ButtonType) => {
     )
 }
 
-export default button
+export default Button
