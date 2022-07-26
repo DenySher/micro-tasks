@@ -1,4 +1,3 @@
-import { type } from "@testing-library/user-event/dist/type"
 import { useState } from "react"
 import Input from "./Input"
 
@@ -13,13 +12,14 @@ const ShowInput = () => {
         { message: 'message3' }
     ])
 
-    const addMassages = (title:string) => {
-        console.log(title)
+    const addMassages = (inputValue: string) => {
+        let newMessage = { message: inputValue }
+        setMessage([newMessage, ...message]) // поменяли местами, что бы новый message добавлялся сверху старого, а не снизу
     }
 
     return (
         <>
-            <Input addMassages={addMassages}/>
+            <Input addMassages={addMassages} />
             {message.map((e, idx) => {
                 return (
                     <div key={idx}>{e.message}</div>
