@@ -4,6 +4,7 @@ import ShowButton from './components/Button/ShowButton';
 import ShowtCars from './components/Cars/ShowCars'
 import UseState from './components/UseState/UseState';
 import ShowFilter from './components/Filter/ShowFilter';
+import ShowInput from './components/Input/ShowInput';
 
 function App() {
 
@@ -25,6 +26,10 @@ function App() {
                 <div>
                     <ShowFilter />
                 </div>
+                <div>
+                    <ShowInput />
+                </div>
+
             </div>
         </div>
     );
