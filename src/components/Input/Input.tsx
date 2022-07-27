@@ -1,28 +1,20 @@
-import { useState } from "react"
 import { ChangeEvent } from 'react'
 
-type InputPropsType = {
-    addMassages: (addMassages: string) => void
+export type InpurPropsType = { // типизируем props
+    inputValue: string
+    setInputValue: (InputValue: string) => void
 }
 
-const Input = (props: InputPropsType) => {
+const Input = (props: InpurPropsType) => {
 
-    const [inputValue, setinputValue] = useState('')
-
-    const onChangeInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setinputValue(e.currentTarget.value)
-    }
-
-    const onClickButtonGandler = () => {
-        props.addMassages(inputValue)
-        setinputValue('')
+    const onChangeInputHandler = (e: ChangeEvent<HTMLInputElement>) => { // foo для onChange, которая вызывает setInputValue, полученный от ShowInput
+        props.setInputValue(e.currentTarget.value)
     }
 
     return (
         <>
             <div>
-                <input value={inputValue} onChange={onChangeInputHandler}></input>
-                <button onClick={onClickButtonGandler}>add</button>
+                <input value={props.inputValue} onChange={onChangeInputHandler}></input>
             </div>
         </>
     )
